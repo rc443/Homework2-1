@@ -1,8 +1,8 @@
 <?php
     // get the data from the form
-    $product_description = $_POST['product_description'];
-    $list_price = $_POST['list_price'];
-    $discount_percent = $_POST['discount_percent'];
+    $product_description = filter_input(INPUT$_POST, 'product_description';
+    $list_price = filter_input (INPUT$_POST, 'list_price';
+    $discount_percent = filter_input (INPUT$_POST, 'discount_percent';
 	    
     // calculate the discount
     $discount = $list_price * $discount_percent * .01;
@@ -28,19 +28,19 @@
 	        <h1>Product Discount Calculator</h1>
 
 	        <label>Product Description:</label>
-	        <span><?php echo $product_description_escaped; ?></span><br>
+	        <span><?php echo htmlspecialchars($product_description); ?></span><br>
 
 	        <label>List Price:</label>
-	       <span><?php echo $list_price_formatted; ?></span><br>
+	       <span><?php echo htmlspecialchars($list_price_f); ?></span><br>
 
 	        <label>Standard Discount:</label>
-	        <span><?php echo $discount_percent_formatted; ?></span><br>
+	        <span><?php echo htmlspecialchars($discount_percent_f); ?></span><br>
 
 	        <label>Discount Amount:</label>
-	        <span><?php echo $discount_formatted; ?></span><br>
+	        <span><?php echo $discount_f; ?></span><br>
 
 	        <label>Discount Price:</label>
-		<span><?php echo $discount_price_formatted; ?></span><br>
+		<span><?php echo $discount_price_f; ?></span><br>
     </main>
 </body>
 </html>
